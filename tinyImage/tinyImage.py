@@ -9,7 +9,7 @@ input_dir = root_dir + '\\images'
 output_dir = root_dir + '\\tinyimages'
 images_list = os.listdir(input_dir)
 
-image_url = 'https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/images/sn-pandasH.jpg'
+image_url = ''
 
 
 def local_images():
@@ -35,10 +35,10 @@ def url_image(url):
     pass
 
 def deleteImage(dir):
-  file_list = os.listdir(input_dir)
+  file_list = os.listdir(dir)
   for filename in file_list:
     try:
-      my_file = str(input_dir+'\\'+filename)
+      my_file = str(dir+'\\'+filename)
       os.remove(my_file)
       print(filename +"删除完成")
     except:
